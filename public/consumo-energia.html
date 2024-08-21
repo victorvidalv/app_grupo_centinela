@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de Energía</title>
+    <link rel="stylesheet" href="/css/consumo-energia.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Consumo de Energía</h1>
+            <form id="energyForm">
+                <div class="form-group">
+                    <label for="machineId">Seleccionar Máquina</label>
+                    <select id="machineId" name="machineId" required>
+                        <option value="">Cargando máquinas...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Fecha de Inicio</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="endDate">Fecha de Fin</label>
+                    <input type="date" id="endDate" name="endDate" required>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="todayCheckbox">
+                    <label for="todayCheckbox">Día de hoy</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Mostrar Consumo de Energía</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="result" class="result-container">
+            <div id="resultBox" class="result-box" style="display: none;">
+                <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+
+                <pre id="resultData"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/consumo-energia.js"></script>
+</body>
+
+</html>

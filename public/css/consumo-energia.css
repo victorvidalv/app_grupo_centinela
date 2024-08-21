@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1200px; /* Aumentar el ancho máximo para permitir espacio suficiente */
+    margin: 0 auto;
+    display: flex; /* Usar flexbox para organizar los elementos en fila */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.form-container {
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.result-container {
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    flex-direction: column; /* Organizar los resultados verticalmente */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input,
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex: 1; /* Asegura que el contenedor de resultados ocupe el espacio disponible */
+}
+
+.result-box pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.copy-button {
+    margin-bottom: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.copy-button:hover {
+    background-color: #0056b3;
+}

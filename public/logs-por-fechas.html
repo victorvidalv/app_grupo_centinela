@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs por Rango de Fechas</title>
+<link rel="stylesheet" href="css/logs-por-fechas.css">
+</head>
+<body>
+    <h1>Consulta de Logs por Rango de Fechas</h1>
+    
+    <form id="logForm">
+        <label for="startDate">Fecha de inicio:</label>
+        <input type="date" name="startDate" id="startDate" required>
+
+        <label for="endDate">Fecha de fin:</label>
+        <input type="date" name="endDate" id="endDate" required>
+
+        <button type="submit">Obtener Datos</button>
+    </form>
+
+    <div id="resultContainer" class="result-container" style="display: none;">
+        <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+        <pre id="responseData"></pre>
+    </div>
+
+    <script src="js/logs-por-fechas.js"></script>
+</body>
+</html>

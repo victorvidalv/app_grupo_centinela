@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs del Día</title>
+<link rel="stylesheet" href="css/logs-del-dia.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Obtener Logs del Día</h1>
+        <form id="queryForm">
+            <div class="form-group">
+                <label for="machineId">Seleccionar Máquina</label>
+                <select id="machineId" name="machineId" required>
+                    <option value="">Cargando máquinas...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Fecha de Inicio</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">Fecha de Fin</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="todayCheckbox">
+                <label for="todayCheckbox">Día de hoy</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Obtener Datos</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="result-container" id="result" style="display: none;">
+        <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+        <pre id="resultData"></pre>
+    </div>
+
+    <script src="js/logs-del-dia.js"></script>
+</body>
+</html>

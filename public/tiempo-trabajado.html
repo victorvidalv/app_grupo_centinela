@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Trabajado Hoy</title>
+    <link rel="stylesheet" href="css/tiempo-trabajado.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tiempo Trabajado Hoy</h1>
+        <form id="timeForm">
+            <div class="form-group">
+                <label for="machineId">Seleccionar Máquina</label>
+                <select id="machineId" name="machineId" required>
+                    <option value="">Cargando máquinas...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Mostrar Tiempo Trabajado Hoy</button>
+            </div>
+        </form>
+
+        <div id="result" class="result-box" style="display: none;">
+            <pre id="resultData"></pre>
+        </div>
+    </div>
+
+    <script src="js/tiempo-trabajado.js"></script>
+</body>
+
+</html>
