@@ -1,46 +1,47 @@
-# Proyecto de Consultas a la API de Grupo Centinela
+Proyecto de Consultas a la API de Grupo Centinela
 
-## Instrucciones para obtener el token de autenticación
+Instrucciones para obtener el token de autenticación
 
 Para poder utilizar las funcionalidades de este proyecto, es necesario obtener un token de autenticación. Sigue los pasos a continuación para obtenerlo:
 
-### 1. Realizar la solicitud de autenticación
+1. Realizar la solicitud de autenticación
 
 Debes hacer una solicitud POST a la siguiente ruta para obtener el token:
 
-**URL:** `https://one.grupocentinela.cl/api/auth/login`
+URL: https://one.grupocentinela.cl/api/auth/login
 
-**Método:** POST
+Método: POST
 
-**Encabezados:** 
-- `Content-Type: application/json`
+Encabezados: 
+- Content-Type: application/json
 
-**Cuerpo de la solicitud (Body):**
-```json
+Cuerpo de la solicitud (Body):
 {
     "username": "username",
     "password": "password"
 }
+
 2. Obtener el token
-Después de realizar la solicitud, recibirás una respuesta en formato JSON que incluirá un campo llamado token. Este token es necesario para realizar consultas a otras rutas de la API.
+
+Después de realizar la solicitud, recibirás una respuesta en formato JSON que incluirá un campo llamado "token". Este token es necesario para realizar consultas a otras rutas de la API.
 
 3. Configurar el archivo .env
-Copia el token obtenido y pégalo en el archivo .env en la clave API_KEY. El archivo .env debería verse así:
 
-plaintext
+Copia el token obtenido y pégalo en el archivo `.env` en la clave API_KEY. El archivo `.env` debería verse así:
 
 API_KEY="el_token_obtenido"
 API_URL=https://one.grupocentinela.cl/api/consults/execute
+
 4. Recomendación
-Se recomienda utilizar una herramienta como Postman para realizar la solicitud POST de manera sencilla.
+
+Se recomienda utilizar una herramienta como Postman (https://www.postman.com/) para realizar la solicitud POST de manera sencilla.
 
 Configuración del Proyecto
-Clona el repositorio:
 
-
-git clone <URL_del_repositorio>
-Instala las dependencias del proyecto:
-
+1. Clona el repositorio.
+2. Crea un archivo `.env` en la raíz del proyecto basado en el archivo `.env.example`.
+3. Reemplaza el valor de API_KEY con el token obtenido en el paso 2.
+4. Ejecuta el proyecto siguiendo las instrucciones del repositorio.
 
 npm install
 Crea un archivo .env en la raíz del proyecto basado en el archivo .env.example.
